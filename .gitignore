@@ -1,5 +1,6 @@
 ## Compiled python code
 *.rpyc
+*.rpymc
 
 ## Ren'Py save games
 game/saves/
