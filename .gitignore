@@ -1,0 +1,15 @@
+## Compiled python code
+*.rpyc
+
+## Ren'Py save games
+game/saves/
+*.save
+
+## Ren'Py cache
+game/cache/
+
+## Ren'Py logs
+log.txt
+
+## Misc. backup files
+*.bak
