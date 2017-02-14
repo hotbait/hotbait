@@ -15,6 +15,7 @@ label splashscreen:
 ################################################################################
 label start:
     scene black
+    stop music fadeout 2.0
     # The "sl" stands for "social links". This makes me happy.
     $ sl_cutoff = 3
     $ sl_beluga = 0
