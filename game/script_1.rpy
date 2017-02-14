@@ -78,7 +78,7 @@ label classroom1:
     show char tc
     tc "\[INTRODUCTORY WHALE SOUNDS\]"
     show char fk happy
-    fk "\[SMUG WHALE SOUNDS\]"
+    fk "\[SMUG \"WHALE\" SOUNDS\]"
     mc "I don't understand Kira-chan, it's like you aren't speaking whale at all!"
     show char fk sad
     fk "..."
@@ -92,6 +92,13 @@ label classroom1:
     "\*Crickets\*"
     show char bs sad
     ".{w=0.8}.{w=0.8}.{w=0.8}"
+    show char tc
+    tc ".{w=0.3}.{w=0.3}.{w=0.3}"
+    tc "\[WHALE SOUNDS\]"
+    show char tc flip
+    tc "\[WHALE SOUNDS\]"
+    show char tc
+    tc "\[MORE WHALE SOUNDS\]"
     show char bb neutral at slowmovein
     $ renpy.pause(20, hard=True)
     "You notice a blue whale creeping into the back of the classroom."
@@ -100,20 +107,24 @@ label classroom1:
     tc "\[MORE ANNOYED WHALE SOUNDS\]"
     show char bb neutral
     "The new entry to the class just takes their seat, and starts twiddling their thumbs."
-    "Despite receiving a stern telling-off from the teacher, the blue whale doesn't seem to care."
+    "Despite receiving a stern telling-off from J2-sensei, the blue whale doesn't seem to care."
     show char tc
+    tc "*sigh*"
     tc "\[WHALE SOUNDS\]"
     tc "\[WHALE SOUNDS\] [mc_name] \[MORE WHALE SOUNDS\]?"
 menu:
     "I would prefer to use Monte Carlo Kelp Search for this problem!":
         $ sl_beluga +=1
         $ sl_bigblue -= 1
+        tc "\[WHALE SOUNDS!\]"
     "\*Look around classroom for help\*":
         $ sl_bigblue +=1
         $ sl_kira -= 1
+        tc "\[WHALE SOUNDS\]"
     "The answer is 42, J2-sensei!":
         $ sl_kira +=1
         $ sl_beluga -= 1
+        tc "*sigh*"
 label classroom1_cont:
     tc "\[WHALE SOUNDS\]"
     hide char tc

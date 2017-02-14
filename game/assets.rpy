@@ -53,6 +53,7 @@ image char fk scared      = "fk_scared.png"
 image char fk thinking    = "fk_think.png"
 
 image char tc = "sensei.png"
+image char tc flip = im.Flip("sensei.png", horizontal=True)
 image char nr = "nurse.png"
 
 # Time cards
