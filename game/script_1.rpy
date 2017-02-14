@@ -46,8 +46,10 @@ label arrival:
 
     mc "Oh no, it's already 9:00! I'm going to be late on my first day!"
     play movie "bg corridor.ogv" loop
-    mc "I think the classroom is around this corner..." with vpunch
-    show char bs angry
+    mc "I think the classroom is around this corner..."
+    mc "Argh!" with vpunch
+    show char bs angry with moveinbottom
+    "You appear to have run head-first into an annoyed looking Beluga."
     my "\[ANGRY WHALE SOUNDS\]"
     show char bs neutral
     my "\[WHALE SOUNDS\]"
@@ -57,6 +59,7 @@ menu:
     "You should watch where you're going next time.":
         jump arrival_cont
 label arrival_cont:
+    show char bs angry
     my "\[WHALE SOUNDS\]"
     hide char bs neutral with moveoutright
     "They stormed off..."
@@ -71,37 +74,48 @@ label classroom1:
 
     play movie "bg classroom.ogv" loop
     "Morning classes"
+    "You take your seat just as the teacher is about to start."
     show char tc
     tc "\[INTRODUCTORY WHALE SOUNDS\]"
     show char fk happy
     fk "\[SMUG WHALE SOUNDS\]"
-    mc "I don't understand Kira-chan, it's like they aren't speaking whale at all!"
-    show char bs joking
+    mc "I don't understand Kira-chan, it's like you aren't speaking whale at all!"
+    show char fk sad
+    fk "..."
+    show char bs neutral
+    bs "\[WHALE SOUNDS\]"
+    show char bs happy
     bs "\[JOKING WHALE SOUNDS\]"
+    bs "\[PUNCHLINE WHALE SOUNDS\]"
+    ".{w=0.8}.{w=0.8}.{w=0.8}"
+    show char bs joking
     "\*Crickets\*"
     show char bs sad
-    "..."
+    ".{w=0.8}.{w=0.8}.{w=0.8}"
     show char bb neutral at slowmovein
     $ renpy.pause(20, hard=True)
     "You notice a blue whale creeping into the back of the classroom."
     show char tc
     tc "\[ANNOYED WHALE SOUNDS\]"
+    tc "\[MORE ANNOYED WHALE SOUNDS\]"
+    show char bb neutral
+    "The new entry to the class just takes their seat, and starts twiddling their thumbs."
+    "Despite receiving a stern telling-off from the teacher, the blue whale doesn't seem to care."
+    show char tc
     tc "\[WHALE SOUNDS\]"
+    tc "\[WHALE SOUNDS\] [mc_name] \[MORE WHALE SOUNDS\]?"
 menu:
     "I would prefer to use Monte Carlo Kelp Search for this problem!":
         $ sl_beluga +=1
         $ sl_bigblue -= 1
-        jump classroom1_cont
     "\*Look around classroom for help\*":
         $ sl_bigblue +=1
         $ sl_kira -= 1
-        jump classroom1_cont
     "The answer is 42, J2-sensei!":
         $ sl_kira +=1
         $ sl_beluga -= 1
-        jump classroom1_cont    
 label classroom1_cont:
     tc "\[WHALE SOUNDS\]"
-    "..."
     hide char tc
+    "The rest of the morning class continues as normal."
     jump break
