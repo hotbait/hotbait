@@ -295,7 +295,7 @@ screen navigation():
         style_prefix "navigation"
 
         xpos gui.navigation_xpos
-        yalign 0.95
+        yalign 0.7
 
         spacing gui.navigation_spacing
 
@@ -303,11 +303,11 @@ screen navigation():
 
             textbutton _("Start") action Start()
 
-        textbutton _("Preferences") action ShowMenu("preferences")
-
         if not main_menu:
 
             textbutton _("Main Menu") action MainMenu()
+
+        textbutton _("Preferences") action ShowMenu("preferences")
 
         textbutton _("About") action ShowMenu("about")
 
@@ -344,6 +344,7 @@ screen main_menu():
     style_prefix "main_menu"
 
     add gui.main_menu_background
+    add "championship_edition.png" xalign 0.1 yalign 0.98
 
     ## This empty frame darkens the main menu.
     frame:
@@ -373,7 +374,6 @@ style main_menu_version is main_menu_text
 style main_menu_frame:
     xsize 300
     yfill True
-
     background "gui/overlay/main_menu.png"
 
 style main_menu_vbox:
@@ -385,8 +385,6 @@ style main_menu_vbox:
 
 style main_menu_text:
     xalign 0.5
-
-
     layout "subtitle"
     text_align 1.0
     color gui.accent_color
@@ -488,11 +486,11 @@ style game_menu_outer_frame:
     background "gui/overlay/game_menu.png"
 
 style game_menu_navigation_frame:
-    xsize 300
+    xsize 200
     yfill True
 
 style game_menu_content_frame:
-    left_margin 40
+    left_margin 10
     right_margin 20
     top_margin 10
 
@@ -547,7 +545,7 @@ screen about():
             if gui.about:
                 text "[gui.about!t]\n"
 
-            text _("Made with {a=https://www.renpy.org/}Ren'Py{/a} [renpy.version_only].\n\n[renpy.license!t]")
+            text _("Made with {a=https://www.renpy.org/}Ren'Py{/a} [renpy.version_only] for the 2016 Global Game Jam by a team of {a=http://iggi.org.uk}IGGI{/a} Ph.D. students.\n\n[renpy.license!t]")
 
 
 ## This is redefined in options.rpy to add text to the about screen.
@@ -903,7 +901,7 @@ screen help():
         style_prefix "help"
 
         vbox:
-            spacing 15
+            spacing 10
 
             hbox:
 
@@ -963,9 +961,9 @@ screen keyboard_help():
         label "S"
         text _("Takes a screenshot.")
 
-    hbox:
-        label "V"
-        text _("Toggles assistive {a=https://www.renpy.org/l/voicing}self-voicing{/a}.")
+    # hbox:
+    #     label "V"
+    #     text _("Toggles assistive {a=https://www.renpy.org/l/voicing}self-voicing{/a}.")
 
 
 screen mouse_help():
@@ -983,7 +981,7 @@ screen mouse_help():
         text _("Accesses the game menu.")
 
     hbox:
-        label _("Mouse Wheel Up\nClick Rollback Side")
+        label _("Mouse Wheel Up")
         text _("Rolls back to earlier dialogue.")
 
     hbox:
@@ -1034,7 +1032,7 @@ style help_button_text:
     properties gui.button_text_properties("help_button")
 
 style help_label:
-    xsize 250
+    xsize 210
     right_padding 20
 
 style help_label_text:
