@@ -200,9 +200,9 @@ label break_dossing:
     "You pretend you're ill."
 
     show char nr
-    nr "\[Whale sounds\]"
+    nr "\[WHALE SOUNDS\]"
     show char bs neutral
-    bs "\[Whale sounds\]"
+    bs "\[WHALE SOUNDS\]"
     mc "What are you doing here, Beluga-senpai?"
 
 menu:
@@ -215,14 +215,14 @@ label break_dossing_next:
     show char bs blush
     bs "..."
     show char bs angry
-    bs "\[Whale sounds\]"
+    bs "\[WHALE SOUNDS\]"
     hide char bs angry with moveoutright
     $ sl_beluga += 1
     "Beluga-senpai ran off again..."
     jump break_dossing_cont
 
 label break_dossing_opposite:
-    bs "\[Whale sounds\]?"
+    bs "\[WHALE SOUNDS\]?"
 
 menu:
     "Nothing!":
@@ -233,15 +233,15 @@ menu:
         jump break_dossing_opposite_flirt
 
 label break_dossing_opposite_flirt:
-    bs "\[Whale sounds\]"
+    bs "\[WHALE SOUNDS\]"
     show char bs blush
     $ sl_beluga += 1
     jump break_dossing_cont
 
 label break_dossing_cont:
     show char nr
-    nr "\[Whale sounds\]"
-    nr "\[Whale sounds\]"
+    nr "\[WHALE SOUNDS\]"
+    nr "\[WHALE SOUNDS\]"
     
     hide char nr
     jump break_cont    
