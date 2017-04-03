@@ -1,4 +1,5 @@
 init python:
+    renpy.music.register_channel("blip", "sfx", True)
     def sound_text_default(event, **kwargs):
         sound_text(event, "audio/sfx/blip_default.wav")
     def sound_text_bb(event, **kwargs):
@@ -13,9 +14,9 @@ init python:
         sound_text(event, "audio/sfx/blip_flat.wav")
     def sound_text(event, filename):
         if event == "show":
-            renpy.music.play(filename, channel="sound")
+            renpy.music.play(filename, channel="blip")
         elif event == "slow_done" or event == "end":
-            renpy.music.stop(channel="sound")
+            renpy.music.stop(channel="blip")
 
 image movie = Movie(size=(800, 600), xpos=0, ypos=0, xanchor=0, yanchor=0)
 
