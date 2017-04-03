@@ -16,7 +16,7 @@ init python:
         if event == "show":
             renpy.music.play(filename, channel="blip")
         elif event == "slow_done" or event == "end":
-            renpy.music.stop(channel="blip")
+            renpy.music.stop(channel="blip", fadeout=0.1)
 
 image movie = Movie(size=(800, 600), xpos=0, ypos=0, xanchor=0, yanchor=0)
 
