@@ -178,16 +178,19 @@ label lunch_falsekiller_3:
     fk "\[\"WHALE\" SOUNDS\]"
 menu:
     "Anime? I've never heard of it!~":
-        jump lunch_cont
+        jump lunch_falsekiller_4
     "Er...sure?":
-        jump lunch_cont
+        jump lunch_falsekiller_4
     "I'm sure you don't associate with that kind of sealife!":
         $ sl_kira -= 1
-        jump lunch_cont
+        jump lunch_falsekiller_4
+
+label lunch_falsekiller_4:
+    fk "\[\"WHALE\" SOUNDS\]"
+    fk "\[\"WHALE\" SOUNDS\]"
+    jump lunch_cont
 
 ################################################################################
 label lunch_cont:
-    hide char bb
-    hide char fk
-    hide char bs
+    hide char
     jump classroom2

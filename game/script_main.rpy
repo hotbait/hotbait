@@ -27,10 +27,12 @@ label start:
 ################################################################################
 label credits:
     stop movie
+    scene black
     hide movie
     hide end
     $ renpy.pause(0.1) # Eugh, hacky
     show credit text at creditspan with Pause(30)
+    $ renpy.pause(5, hard=True)
     hide credit text with dissolve
     $ renpy.quit()
 

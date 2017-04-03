@@ -10,7 +10,9 @@ game/saves/
 game/cache/
 
 ## Ren'Py logs
+errors.txt
 log.txt
+traceback.txt
 
 ## Misc. backup files
 *.bak

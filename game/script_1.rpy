@@ -47,12 +47,14 @@ label arrival:
     mc "Oh no, it's already 9:00! I'm going to be late on my first day!"
     play movie "bg corridor.ogv" loop
     mc "I think the classroom is around this corner..."
+    play sound "audio/sfx/bump.wav" noloop
     mc "Argh!" with vpunch
+    stop sound
     show char bs angry with moveinbottom
     "You appear to have run head-first into an annoyed looking Beluga."
-    my "\[ANGRY WHALE SOUNDS\]"
+    my_bs "\[ANGRY WHALE SOUNDS\]"
     show char bs neutral
-    my "\[WHALE SOUNDS\]"
+    my_bs "\[WHALE SOUNDS\]"
 menu:
     "I'm so sorry! Let me help you up!":
         jump arrival_cont
@@ -60,7 +62,7 @@ menu:
         jump arrival_cont
 label arrival_cont:
     show char bs angry
-    my "\[WHALE SOUNDS\]"
+    my_bs "\[WHALE SOUNDS\]"
     hide char bs neutral with moveoutright
     "They stormed off..."
     jump classroom1

@@ -32,7 +32,7 @@ label club_comedy:
     play movie "bg corridor.ogv" loop
 
     mc "Hmm, I hope this is the right room for the comedy club..."
-    my "\[WHALE SOUNDS\]"
+    my_bs "\[WHALE SOUNDS\]"
     mc "Is that...?"
 
     play movie "bg comedy.ogv" loop
@@ -49,7 +49,7 @@ label club_comedy:
     "..."
     show char bs neutral
     "Beluga-senpai is looking around the room."
-    "No-one is laughing."
+    "No one is laughing."
 menu:
     "Cheer for Beluga-senpai":
         jump club_comedy_neg
@@ -91,7 +91,7 @@ menu:
         jump club_comedy_joke1
 
 label club_comedy_joke1:
-    "There are some giggles from the audience"
+    "There are some giggles from the audience."
 menu:
     "\"I don't know about you, but I'm having a {b}WHALE{/b} of a time!\"":
         jump club_comedy_joke2

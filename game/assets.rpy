@@ -1,13 +1,35 @@
+init python:
+    def sound_text_default(event, **kwargs):
+        sound_text(event, "audio/sfx/blip_default.wav")
+    def sound_text_bb(event, **kwargs):
+        sound_text(event, "audio/sfx/blip_medium.wav")
+    def sound_text_bs(event, **kwargs):
+        sound_text(event, "audio/sfx/blip_low.wav")
+    def sound_text_fk(event, **kwargs):
+        sound_text(event, "audio/sfx/blip_high.wav")
+    def sound_text_tc(event, **kwargs):
+        sound_text(event, "audio/sfx/blip_sharp.wav")
+    def sound_text_other(event, **kwargs):
+        sound_text(event, "audio/sfx/blip_flat.wav")
+    def sound_text(event, filename):
+        if event == "show":
+            renpy.music.play(filename, channel="sound")
+        elif event == "slow_done" or event == "end":
+            renpy.music.stop(channel="sound")
+
 image movie = Movie(size=(800, 600), xpos=0, ypos=0, xanchor=0, yanchor=0)
 
 # Character types
-define tc = Character("J2-sensei")
-define my = Character("???")
-define bs = Character("Beluga-senpai")
-define bb = Character("Big Blue")
-define mc = DynamicCharacter("mc_name")
+define narrator = Character(None, callback=sound_text_default)
+define tc = Character("J2-sensei", callback=sound_text_tc)
+define my_bs = Character("???", callback=sound_text_bs)
+define my_bb = Character("???", callback=sound_text_bb)
+define my = Character("???", callback=sound_text_other)
+define bs = Character("Beluga-senpai", callback=sound_text_bs)
+define bb = Character("Big Blue", callback=sound_text_bb)
+define mc = DynamicCharacter("mc_name", callback=sound_text_default)
 define nr = Character("Nurse")
-define fk = Character("Kira-chan")
+define fk = Character("Kira-chan", callback=sound_text_fk)
 
 # Disclaimer/Intro/Credits images
 image ship        = "ship.png"

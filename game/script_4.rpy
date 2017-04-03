@@ -58,7 +58,7 @@ label cleaning:
     play movie "bg classroom.ogv" loop
 
     mc "I'm supposed to be cleaning with Big Blue? Where in the sea could they be?"
-    my "♪\[WHALE SOUNDS\]♪"
+    my_bb "♪\[WHALE SOUNDS\]♪"
     mc "It's coming from the cupboard..."
 
     play movie "bg closet.ogv" loop
