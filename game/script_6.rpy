@@ -41,7 +41,7 @@ label confession_beluga_success:
 
 label confession_beluga_failure:
     show char bs angry
-    "I dislike you even more than most people"
+    bs "I dislike you even more than most people"
     hide char bs angry
     "You’re going to die sad and alone, under the waves~~~"
     window hide
