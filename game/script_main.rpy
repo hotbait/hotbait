@@ -26,6 +26,7 @@ label start:
 
 ################################################################################
 label credits:
+    scene black
     stop movie
     hide movie
     hide end
