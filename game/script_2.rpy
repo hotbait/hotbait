@@ -252,6 +252,7 @@ label break_dossing_cont:
     nr "\[Whale sounds\]"
     stop sound
     
+    hide char nr
     jump break_cont    
 
 ################################################################################
