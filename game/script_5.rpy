@@ -76,7 +76,7 @@ menu:
         jump club_comedy_cont_2
 
 label club_comedy_cont_2:
-    hide char beluga neutral
+    hide char bs neutral
     my "Hey - it's your turn!"
     "You're pushed towards the stage."
     "Everyone is watching you."
