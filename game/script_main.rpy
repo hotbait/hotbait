@@ -26,13 +26,15 @@ label start:
 
 ################################################################################
 label credits:
+    play music "audio/bensound-memories.mp3"
     stop movie
     scene black
     hide movie
     hide end
     $ renpy.pause(0.1) # Eugh, hacky
-    show credit text at creditspan with Pause(30)
-    $ renpy.pause(5, hard=True)
+    show credit text at creditspan with Pause(45)
+    $ renpy.pause(45, hard=True)
+    stop music fadeout 2.0
     hide credit text with dissolve
     $ renpy.quit()
 

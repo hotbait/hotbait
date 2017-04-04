@@ -113,5 +113,5 @@ transform slowmoveout:
     
 transform creditspan:
     xanchor 0.0 yanchor 0.0 ypos 1.0 xpos 0.0
-    linear 20.0 ypos -1.2
+    linear 40.0 ypos -1.2
 
