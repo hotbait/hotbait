@@ -1,12 +1,8 @@
 ﻿################################################################################
 label lunch:
-    window hide
-    show hours 5
-    pause(3)
-    hide hours 5
-    window show
-    
+    call countdown(5)
     play movie "bg lunch.ogv" loop
+    
     mc "The cafeteria is so crowded! I don't recognise many people..."
     "I can see Kira-chan and Beluga-senpai. Big Blue is smoking outside."
     "Who should I sit with?"

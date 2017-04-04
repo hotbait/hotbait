@@ -1,10 +1,6 @@
 ################################################################################
 label classroom2:
-    window hide
-    show hours 4
-    pause(3)
-    hide hours 4
-    window show
+    call countdown(4)
     play movie "bg classroom.ogv" loop
 
     # Afternoon class
@@ -49,12 +45,7 @@ label classroom2_3:
 
 ################################################################################
 label cleaning:
-    window hide
-    show hours 3
-    pause(3)
-    hide hours 3
-    window show
-
+    call countdown(3)
     play movie "bg classroom.ogv" loop
 
     mc "I'm supposed to be cleaning with Big Blue? Where in the sea could they be?"

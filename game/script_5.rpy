@@ -23,12 +23,7 @@ menu:
 
 ################################################################################
 label club_comedy:
-    window hide
-    show hours 2
-    pause(3)
-    hide hours 2
-    window show
-
+    call countdown(2)
     play movie "bg corridor.ogv" loop
 
     mc "Hmm, I hope this is the right room for the comedy club..."
@@ -126,12 +121,7 @@ label club_comedy_joke3:
 
 ################################################################################
 label club_anime:
-    window hide
-    show hours 2
-    pause(3)
-    hide hours 2
-    window show
-
+    call countdown(2)
     play movie "bg anime.ogv" loop
 
     "You arrive at the anime clubroom."
@@ -214,12 +204,7 @@ label club_anime_4:
 
 ################################################################################
 label club_choir:
-    window hide
-    show hours 2
-    pause(3)
-    hide hours 2
-    window show
-
+    call countdown(2)
     play movie "bg choir.ogv" loop
 
     show char bb neutral

@@ -1,11 +1,6 @@
 ################################################################################
 label ribbon:
-    window hide
-    show hours 10
-    pause(3)
-    hide hours 10
-    window show
-
+    call countdown(10)
     show bg home
     mc "My first day at St. Edmunds Academy for Talented Whales!"
     mc "I hope I get on with the other students."
@@ -30,16 +25,12 @@ menu:
 label ribbon_cont:
     mc "I love my {color=%(ribbon_hex)s}\[%(ribbon)s\]{/color} ribbon!"
     mc "I better get going!"
+    hide bg
     jump arrival
 
 ################################################################################
 label arrival:
-    window hide
-    show hours 9
-    pause(3)
-    hide hours 9
-    window show
-
+    call countdown(9)
     show movie
     play movie "bg longjump.ogv" loop
     show movie
@@ -69,12 +60,9 @@ label arrival_cont:
 
 ################################################################################
 label classroom1:
-    window hide
-    show hours 8
-    pause(3)
-    hide hours 8
-
+    call countdown(8)
     play movie "bg classroom.ogv" loop
+    
     "Morning classes"
     "You take your seat just as the teacher is about to start."
     show char tc

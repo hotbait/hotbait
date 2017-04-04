@@ -1,11 +1,6 @@
 ################################################################################
 label confession:
-    window hide
-    show hours 1
-    pause(3)
-    hide hours 1
-    window show
-
+    call countdown(1)
     play movie "bg corridor.ogv" loop
 
     mc "There are so many kawaii whales here! But only one can claim my heart"

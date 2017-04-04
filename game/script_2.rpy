@@ -1,11 +1,6 @@
 ﻿################################################################################
 label break:
-    window hide
-    show hours 7
-    pause(3)
-    hide hours 7
-    window show
-
+    call countdown(7)
     play movie "bg corridor.ogv" loop
 
     show char fk panic
@@ -43,12 +38,7 @@ menu:
 
 ################################################################################
 label break_longjump:
-    window hide
-    show hours 6
-    pause(3)
-    hide hours 6
-    window show
-
+    call countdown(6)
     play movie "bg longjump.ogv" loop
 
     show char fk panic
@@ -105,12 +95,7 @@ label break_longjump_cont3:
                 
 ################################################################################
 label break_swimming:
-    window hide
-    show hours 6
-    pause(3)
-    hide hours 6
-    window show
-
+    call countdown(6)
     play movie "bg swimming.ogv" loop
 
     "It’s so rare to find a whale school where you can swim! There’s Big Blue!"
@@ -189,12 +174,7 @@ menu:
     
 ################################################################################
 label break_dossing:
-    window hide
-    show hours 6
-    pause(3)
-    hide hours 6
-    window show
-
+    call countdown(6)
     play movie "bg nurse.ogv" loop
 
     "You pretend you're ill."

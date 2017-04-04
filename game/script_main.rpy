@@ -38,7 +38,18 @@ label credits:
     hide credit text with dissolve
     $ renpy.quit()
 
-
+################################################################################
+label countdown(remaining):
+    $ moon_im_name = "moon %s.jpg" % remaining
+    image moon = "[moon_im_name]"
+    window hide
+    show moon
+    play sound "audio/moon_1.wav" noloop
+    pause(5)
+    stop sound fadeout 2.5
+    hide hours 10
+    window show
+    return
 # For the rest of the scenes, look in the following locations:
 #
 #  script_1 -> ribbon
