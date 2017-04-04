@@ -46,7 +46,7 @@ label countdown(remaining):
     show moon
     play sound "audio/moon_1.wav" noloop
     pause(5)
-    stop sound fadeout 2.5
+    stop sound fadeout 5
     hide hours 10
     window show
     return
